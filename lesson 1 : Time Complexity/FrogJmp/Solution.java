@@ -8,10 +8,8 @@ class Solution {
     public int solution(int X, int Y, int D) {
         // write your code in Java SE 8
         // the frog can jump from position X to a position equal to Y
-        if ((Y-X) % D == 0)
-            return (Y-X) / D;
         // the frog can only jump from position X to a position greater than Y
-        else
-            return (Y-X) / D + 1;
+        int dis = Y - X;
+	 	return (dis / D) + (dis % D == 0 ? 0 : 1);
     }
 }
